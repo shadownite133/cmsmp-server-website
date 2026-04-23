@@ -58,7 +58,7 @@ app.get('/owners', (req, res) => {
         },
         { 
             name: 'Kraven | KravenBacon', 
-            bio: 'This guys mysterios... Self Quote, HE DOESN\'T HAVE ONE',
+            bio: 'This guys mysterios... Self Quote, HE DOESN\'T HAVE ONE................................................................................................................',
             avatar: './images/kraven.png'
         }
     ];
