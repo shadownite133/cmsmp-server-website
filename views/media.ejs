@@ -1,0 +1,35 @@
+<%- include('partials/header') %>
+
+<section class="content-section">
+    <div class="container">
+        <div class="media-header" style="text-align: center; margin-bottom: 50px;" data-aos="fade-down">
+            <h1>Server Media</h1>
+            <p>From big builds to random moments with friends, our creators capture it all. Check out the talented people sharing their CMSMP journey!</p>
+        </div>
+
+        <div class="grid">
+            <% if (creators.length > 0) { %>
+                <% creators.forEach((creator, index) => { %>
+                    <div class="card" data-aos="zoom-in" data-aos-delay="<%= index * 100 %>">
+                        <span class="platform-tag" style="color: var(--secondary); font-size: 0.8rem; font-weight: bold; text-transform: uppercase;">
+                            <%= creator.platform %>
+                        </span>
+                        <h3><%= creator.name %></h3>
+                        <p><%= creator.description %></p>
+                        <a href="<%= creator.link %>" target="_blank" class="btn" style="padding: 8px 20px; font-size: 0.9rem;">View Channel</a>
+                    </div>
+                <% }); %>
+            <% } else { %>
+                <div class="card" style="grid-column: 1 / -1; text-align: center;">
+                    <p>No creators listed yet. Check back soon!</p>
+                </div>
+            <% } %>
+        </div>
+        
+        <div class="info-footer" style="margin-top: 50px; text-align: center;" data-aos="fade-up">
+            <p>Are you a creator on CMSMP? Contact the owners to be featured here!</p>
+        </div>
+    </div>
+</section>
+
+<%- include('partials/footer') %>

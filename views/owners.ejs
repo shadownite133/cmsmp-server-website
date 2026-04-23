@@ -1,0 +1,31 @@
+<%- include('partials/header') %>
+
+<section class="content-section">
+    <div class="container">
+        <div class="section-header" style="text-align: center; margin-bottom: 50px;" data-aos="fade-down">
+            <h1>Meet the Owners</h1>
+            <p>The team dedicated to keeping CMSMP fair, fun, and community-driven[cite: 3, 9].</p>
+        </div>
+
+        <div class="grid">
+            <% owners.forEach((owner, index) => { %>
+                <div class="card" data-aos="fade-up" data-aos-delay="<%= index * 200 %>">
+                    <div class="owner-avatar" style="width: 80px; height: 80px; background: var(--secondary); border-radius: 10px; margin-bottom: 15px; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-user-shield" style="font-size: 2rem; color: white;"></i>
+                    </div>
+                    <h3 style="color: var(--primary); margin-bottom: 10px;"><%= owner.name %></h3>
+                    <p><%= owner.bio %></p>
+                    <div class="owner-badge" style="display: inline-block; padding: 4px 12px; background: rgba(0, 184, 148, 0.2); color: var(--primary); border-radius: 20px; font-size: 0.8rem; font-weight: bold; margin-top: 10px;">
+                        Server Owner
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+
+        <div class="owner-footer" style="margin-top: 60px; text-align: center;" data-aos="fade-up">
+            <p>Our owners ensure that everyone starts on equal ground and that what you achieve comes from your own effort and creativity.</p>
+        </div>
+    </div>
+</section>
+
+<%- include('partials/footer') %>

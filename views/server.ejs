@@ -1,0 +1,24 @@
+<%- include('partials/header') %>
+
+<div class="container" style="text-align: center; padding-top: 100px;">
+    <h1 data-aos="fade-down">Server Status</h1>
+    <div class="status-card" data-aos="flip-left">
+        <h2>cmsmp.nyxon.xyz</h2>
+        <p>Status: <span id="status">Checking...</span></p>
+        <p>Players: <span id="player-count">-</span></p>
+        <p>Version: <span id="version">-</span></p>
+    </div>
+</div>
+
+<script>
+    fetch('https://api.mcstatus.io/v2/status/java/cmsmp.nyxon.xyz')
+        .then(res => res.json())
+        .then(data => {
+            document.getElementById('status').innerText = data.online ? 'Online' : 'Offline';
+            document.getElementById('status').style.color = data.online ? '#00ffcc' : '#ff4d4d';
+            document.getElementById('player-count').innerText = `${data.players.online} / ${data.players.max}`;
+            document.getElementById('version').innerText = data.version.name_clean;
+        });
+</script>
+
+<%- include('partials/footer') %>
