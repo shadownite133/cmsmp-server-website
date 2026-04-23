@@ -58,7 +58,7 @@ app.get('/owners', (req, res) => {
         },
         { 
             name: 'Kraven | KravenBacon', 
-            bio: 'This guys mysterious... he plays fortnite idk... He\'s a pretty chill dude though. Self Quote, he doesn\'t have one yet but he will eventually.',
+            bio: 'This guys mysterious... he plays fortnite idk... He\'s a pretty chill dude though. Self Quote, he doesn\'t have one yet but he will eventually. Probably something about bacon.',
             avatar: './images/kraven.png'
         }
     ];
