@@ -47,16 +47,16 @@ app.get('/media', (req, res) => {
 app.get('/owners', (req, res) => {
     const owners = [
         { 
-            name: 'Owner Name 1', 
-            bio: 'Bio for owner 1. Responsibilities include server development and community management.' 
+            name: 'Shadow | Shadownite133', 
+            bio: 'Shadow is the "Tech" Owner of the group he is know among the community for being, "Too Quiet". Self Quote, "I don\'t know" - Shadownite133' 
         },
         { 
-            name: 'Owner Name 2', 
-            bio: 'Bio for owner 2. Focused on event planning and player interactions.' 
+            name: 'Memes | Memes69ha', 
+            bio: 'Memes69ha is an Iconic figure of CMSMP along with the other owners of CMSMP but he is one of the most "Known" with the public. Self Quote, "I am funny man" - Memes69ha' 
         },
         { 
-            name: 'Owner Name 3', 
-            bio: 'Bio for owner 3. Manages server infrastructure and technical support.' 
+            name: 'Kraven | KravenBacon', 
+            bio: 'This guys mysterios... Self Quote, HE DOESN\'T HAVE ONE' 
         }
     ];
     res.render('owners', { title: 'Meet the Owners', owners });
@@ -70,7 +70,7 @@ app.get('/credits', (req, res) => {
     res.render('credits', { title: 'Credits' });
 });
 
-const PORT = process.env.PORT || 8063;
+const PORT = process.env.PORT || 3094;
 app.listen(PORT, () => {
     console.log(`CMSMP site running on http://localhost:${PORT}`);
 });
