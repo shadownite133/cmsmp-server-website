@@ -48,15 +48,18 @@ app.get('/owners', (req, res) => {
     const owners = [
         { 
             name: 'Shadow | Shadownite133', 
-            bio: 'Shadow is the "Tech" Owner of the group he is know among the community for being, "Too Quiet". Self Quote, "I don\'t know" - Shadownite133' 
+            bio: 'Shadow is the "Tech" Owner of the group he is know among the community for being, "Too Quiet". Self Quote, "I don\'t know" - Shadownite133', 
+            avatar: './public/images/shadow.png'
         },
         { 
             name: 'Memes | Memes69ha', 
-            bio: 'Memes69ha is an Iconic figure of CMSMP along with the other owners of CMSMP but he is one of the most "Known" with the public. Self Quote, "I am funny man" - Memes69ha' 
+            bio: 'Memes69ha is an Iconic figure of CMSMP along with the other owners of CMSMP but he is one of the most "Known" with the public. Self Quote, "I am funny man" - Memes69ha', 
+            avatar: './public/images/memes.png'
         },
         { 
             name: 'Kraven | KravenBacon', 
-            bio: 'This guys mysterios... Self Quote, HE DOESN\'T HAVE ONE' 
+            bio: 'This guys mysterios... Self Quote, HE DOESN\'T HAVE ONE',
+            avatar: './public/images/kraven.png'
         }
     ];
     res.render('owners', { title: 'Meet the Owners', owners });
